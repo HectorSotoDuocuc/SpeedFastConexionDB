@@ -67,4 +67,10 @@ public class Entrega {
 
 
     }
+
+    public Entrega(int id, int idPedido, int idRepartidor) {
+        this.id = id;
+        this.idPedido = idPedido;
+        this.idRepartidor = idRepartidor;
+    }
 }

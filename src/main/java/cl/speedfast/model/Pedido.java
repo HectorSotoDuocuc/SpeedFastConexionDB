@@ -12,6 +12,12 @@ public class Pedido {
         this.estadoPedido = EstadoPedido.PENDIENTE;
     }
 
+    public Pedido(int id, String direccion, String tipoDePedido) {
+        this.id = id;
+        this.direccion = direccion;
+        this.tipoDePedido = tipoDePedido;
+    }
+
     public Pedido(int id, String direccion, String tipoDePedido, EstadoPedido estadoPedido) {
         this.id = id;
         this.direccion = direccion;
@@ -49,5 +55,11 @@ public class Pedido {
 
     public void setEstadoPedido(EstadoPedido estadoPedido) {
         this.estadoPedido = estadoPedido;
+    }
+
+    @Override
+    public String toString() {
+        return "id=" + id + " - " + direccion +
+                "(" + tipoDePedido + ")";
     }
 }
